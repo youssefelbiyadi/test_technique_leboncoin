@@ -1,25 +1,20 @@
 # exo_leboncoin
 
 ## Utilisation de la solution + explications
-
 Pour lancer le programme:
-
 ```
 $ py my_solution.py fichier_1 fichier_2 fichier_3 etc...
 ```
+Le programme prend en input les noms des fichiers contenant les maps (caractères + plateau).
 
-Le programme prend en input les noms des fichiers contenant les maps (caractères + plateau).  
-
-map_gen.py est utilisé pour générer des maps, il est notamment utilisé dans un test de performance dans test_my_solution.py.  
+map_gen.py est utilisé pour générer des maps, il est notamment utilisé dans un test de performance dans test_my_solution.py.
 
 J'ai généré trois fichiers que j'ai mis avec la solution en guise de clarification.
 les trois fichiers sont :
 - map.txt
 - map_invalid.txt
 - large_map.txt
-
 remarque : large_map.txt contient les caractères ",o-" pour illustrer le concept.
-
 ```
 $ cat map.txt
 15.ox
@@ -56,9 +51,7 @@ o...o..........
 .....o.........
 ...............
 ```
-
 Pour lancer le programme sur ces trois fichiers, on lance la commende suivante:
-
 ```
 $ py my_solution.py map.txt map_invalid.txt large_map.txt
 ...o...........
@@ -77,7 +70,6 @@ o...o..........
 .....o.........
 ...............
 map error
-
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,o,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -139,4 +131,123 @@ map error
 ,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,
+,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,o,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,o,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,o,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,o,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,o,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,oo,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,o,,,oo,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,
+,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,o,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,o,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,
+o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,o,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,
+o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,
+,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,
+,,,,,,,,,,,o,,,,,,,,,,o,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,o,,,,,,,,,,,,,ooo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,o,,oo,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,
+,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,o,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+```
+## Test de la solution + Tests unitaires + Explication
+J'ai rédigé mes tests unitaires (en essayant d'inclure un test pour mesurer la performance en cas de larges map (ex: 1000 x 1000)).  
+Je me suis basé sur pytest et coverage pour analyser et lancer mes tests.  
+Je recommande donc d'installer la librairie pytest-cov pour bénificier des fonctionnalités : analyse de couverture de tests + durée d'exécution de tests + rapports html de couverture...
+```
+$ pip install -r requirements.txt 
+```
+Sinon vous pouvez tout siplement faire:
+```
+$ pip install pytest-cov 
+```
+Pour lancer les tests :
+```
+$ pytest -v test_my_solution.py
+collected 12 items                                                                                                                                                                                                                        
+test_my_solution.py::TestMap::test_attributes PASSED                                                                                                                                                                                [  8%]
+test_my_solution.py::TestMap::test_invalid_card PASSED                                                                                                                                                                              [ 16%]
+test_my_solution.py::TestMap::test_valid_card PASSED                                                                                                                                                                                [ 25%]
+test_my_solution.py::TestMapCases::test_empty_chars_only PASSED                                                                                                                                                                     [ 33%]
+test_my_solution.py::TestMapCases::test_exercise_example PASSED                                                                                                                                                                     [ 41%]
+test_my_solution.py::TestMapCases::test_full_chars_only PASSED                                                                                                                                                                      [ 50%]
+test_my_solution.py::TestMapCases::test_no_card PASSED                                                                                                                                                                              [ 58%]
+test_my_solution.py::TestMapCases::test_one_column PASSED                                                                                                                                                                           [ 66%]
+test_my_solution.py::TestMapCases::test_one_row PASSED                                                                                                                                                                              [ 75%]
+test_my_solution.py::TestMapCases::test_simple PASSED                                                                                                                                                                               [ 83%]
+test_my_solution.py::TestMapPerformance::test_large_map PASSED                                                                                                                                                                      [ 91%]
+test_my_solution.py::TestMapPerformance::test_very_large_map PASSED                                                                                                                                                                 [100%]
+=========================================================================================================== 12 passed in 3.22s ===========================================================================================================
+```
+Pour avoir le pourcentage de couverture de tous les tests:
+
+```
+$ pytest --cov=my_solution
+collected 12 items                                                                                                                                                                                                                        
+test_my_solution.py ............                                                                                                                                                                                                    [100%]
+---------- coverage: platform win32, python 3.10.0-final-0 -----------
+Name             Stmts   Miss  Cover
+------------------------------------
+my_solution.py      51      5    90%
+------------------------------------
+TOTAL               51      5    90%
+=========================================================================================================== 12 passed in 8.52s ===========================================================================================================
+```
+On peut aussi visualiser tous les détails de la couverture des tests dans un fichier html avec des couleurs, il suffit de lancer la commande:
+```
+$ pytest -v --cov=my_solution --cov-report=html 
+collected 12 items                                                                                                                                                                                                                        
+test_my_solution.py ............                                                                                                                                                                                                    [100%]
+---------- coverage: platform win32, python 3.10.0-final-0 -----------
+Coverage HTML written to dir htmlcov
+=========================================================================================================== 12 passed in 7.84s ===========================================================================================================
+```
+Comme mentionné dans le résultat des tests, coverage nous indique le chemin du fichier html contenant le rapport de couverture, il est dispo dans le dossier htmlcov (fichier my_solution_py.html).
+
+Et pour finir, on peut afficher la duréé d'éxecution de tous les tests, on spécifiant l'argument --durations. 
+Et pour finir, on peut afficher la durée d'éxecution de tous les tests, on spécifiant l'argument --durations. 
+Noter que --durations=0 permet d'afficher le timing pour tous les tests, si on ajoute seulement --durations on aura que les tests les plus lents.
+
+```
+$ pytest -vv --durations=0
+collected 12 items                                                                                                                                                                                                                        
+test_my_solution.py::TestMap::test_attributes PASSED                                                                                                                                                                                [  8%]
+test_my_solution.py::TestMap::test_invalid_card PASSED                                                                                                                                                                              [ 16%]
+test_my_solution.py::TestMap::test_valid_card PASSED                                                                                                                                                                                [ 25%]
+test_my_solution.py::TestMapCases::test_empty_chars_only PASSED                                                                                                                                                                     [ 33%]
+test_my_solution.py::TestMapCases::test_exercise_example PASSED                                                                                                                                                                     [ 41%]
+test_my_solution.py::TestMapCases::test_full_chars_only PASSED                                                                                                                                                                      [ 50%]
+test_my_solution.py::TestMapCases::test_no_card PASSED                                                                                                                                                                              [ 58%]
+test_my_solution.py::TestMapCases::test_one_column PASSED                                                                                                                                                                           [ 66%]
+test_my_solution.py::TestMapCases::test_one_row PASSED                                                                                                                                                                              [ 75%]
+test_my_solution.py::TestMapCases::test_simple PASSED                                                                                                                                                                               [ 83%]
+test_my_solution.py::TestMapPerformance::test_large_map PASSED                                                                                                                                                                      [ 91%]
+test_my_solution.py::TestMapPerformance::test_very_large_map PASSED                                                                                                                                                                 [100%]
+=========================================================================================================== slowest durations ============================================================================================================
+1.21s call     test_my_solution.py::TestMapPerformance::test_very_large_map
+0.07s call     test_my_solution.py::TestMapPerformance::test_large_map
+```
+
+On Remarque que le test relatif à la carte de taille (1000 x 1000) a pris 1,21s pour être exécuté.  
+Merci de m'avoir lu :) 
