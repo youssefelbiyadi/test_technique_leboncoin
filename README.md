@@ -172,7 +172,13 @@ o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,o,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ```
 ## Test de la solution + Tests unitaires + Explication
-J'ai rédigé mes tests unitaires (en essayant d'inclure un test pour mesurer la performance en cas de larges map (ex: 1000 x 1000)).  
+J'ai rédigé mes tests unitaires en utilisant unittests.
+
+J'ai mis en place 3 classes différents pour Tester mon code:
+- TestMap : l'objectif est de tester la bonne création des attributs de la classe Map ainsi que la méthode de validation de la carte.
+- TestMapCases : l'objectif est de tester plusieurs cas (maps) notamment les cas particuliers, en essayant de trouver le plus grand carré pour chaque cas.
+- TestMapPerformance: J'ai voulu rajouté ces tests pour avoir une idée sur la complexité de la solution proposée, comme le cas d'une large map (taille 1000 x 1000)).
+
 Je me suis basé sur pytest et coverage pour analyser et lancer mes tests.  
 Je recommande donc d'installer la librairie pytest-cov pour bénificier des fonctionnalités : analyse de couverture de tests + durée d'exécution de tests + rapports html de couverture...
 ```
@@ -225,8 +231,8 @@ Coverage HTML written to dir htmlcov
 ```
 Comme mentionné dans le résultat des tests, coverage nous indique le chemin du fichier html contenant le rapport de couverture, il est dispo dans le dossier htmlcov (fichier my_solution_py.html).
 
-Et pour finir, on peut afficher la duréé d'éxecution de tous les tests, on spécifiant l'argument --durations. 
-Et pour finir, on peut afficher la durée d'éxecution de tous les tests, on spécifiant l'argument --durations. 
+
+Et pour finir, on peut afficher la durée d'éxecution de tous les tests, on spécifiant l'argument --durations.  
 Noter que --durations=0 permet d'afficher le timing pour tous les tests, si on ajoute seulement --durations on aura que les tests les plus lents.
 
 ```
@@ -250,4 +256,5 @@ test_my_solution.py::TestMapPerformance::test_very_large_map PASSED             
 ```
 
 On Remarque que le test relatif à la carte de taille (1000 x 1000) a pris 1,21s pour être exécuté.  
-Merci de m'avoir lu :) 
+Merci de m'avoir lu :)  
+Youssef
